@@ -2,14 +2,25 @@
 
 This module is unofficial and not affiliated with Mem0.
 
+## Contents
+
+- [Requirements](#requirements)
+- [Install](#install)
+- [Base URL and auth](#base-url-and-auth)
+- [Client](#client)
+- [Operations](#operations)
+- [Responses](#responses)
+- [Memory versions](#memory-versions)
+- [Pagination](#pagination)
+- [Profile jobs](#profile-jobs)
+- [Rate limits](#rate-limits)
+
 ## Requirements
 
 - Go 1.26.9 or newer, per `go.mod`.
 - A Mem0 Platform API key, exported as `MEM0_API_KEY`.
 
 ## Install
-
-After the repository is published:
 
 ```bash
 go get github.com/psyb0t/go-mem0

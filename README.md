@@ -62,7 +62,9 @@ func main() {
 
 The same code is in `example_test.go`, so `make test` checks that it compiles.
 
-Method names come from the spec's operation IDs. The client includes memory creation, retrieval, search, updates and deletion, entity management, exports, organizations, projects, webhooks, profiles and Dream operations. Both current and deprecated endpoints are generated.
+The full API, with the spec's descriptions as doc comments, is in the [Go reference](https://pkg.go.dev/github.com/psyb0t/go-mem0) and in `go doc github.com/psyb0t/go-mem0`.
+
+Method names come from the spec's operation IDs. The client includes memory creation, retrieval, search, updates and deletion, entity management, exports, organizations, projects, webhooks, profiles and Dream operations. Deprecated endpoints are generated too.
 
 ## Auth
 
@@ -88,7 +90,7 @@ make generate
 
 ## Agent integrations
 
-The [skill](.agents/skills/go-mem0) teaches a coding agent how to use go-mem0 when it writes Go. It works in agents that read `.agents/skills/`. The commands below apply after the repository is published and registered in the marketplace.
+The [skill](.agents/skills/go-mem0) teaches a coding agent how to use go-mem0 when it writes Go. It works in any agent that reads `.agents/skills/`, and installs natively in the clients below.
 
 ### Claude Code
 
@@ -108,7 +110,7 @@ Codex also picks the skill up with no install in any checkout of this repo.
 
 ### OpenClaw
 
-The release workflow is configured to publish the skill to ClawHub. After publication:
+The release workflow publishes the skill to ClawHub on tag pushes:
 
 ```bash
 openclaw skills install @psyb0t/go-mem0

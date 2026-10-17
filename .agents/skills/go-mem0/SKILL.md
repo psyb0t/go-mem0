@@ -1,6 +1,7 @@
 ---
 name: go-mem0
-description: Unofficial Go client for the Mem0 Platform API. Package `mem0` (`github.com/psyb0t/go-mem0`) provides typed methods for memories, entities, events, exports, organizations, projects, webhooks, profiles and Dream operations. Use when Go code needs Mem0 hosted memory or already imports go-mem0.
+description: Unofficial Go client for the Mem0 Platform API, generated with oapi-codegen. Package `mem0` (`github.com/psyb0t/go-mem0`) provides `mem0.NewClientWithResponses` with a typed `...WithResponse` method for every endpoint, covering adding, searching, listing, updating and deleting memories (V1, V2 and V3), entities, events, exports, organizations, projects, webhooks, profiles and Dream operations. Auth is an API key in the `Authorization` header with a `Token` prefix, added through a request editor. Use when Go code needs Mem0 hosted memory or already imports go-mem0.
+license: MIT
 homepage: https://github.com/psyb0t/go-mem0
 user-invocable: true
 metadata:
@@ -8,8 +9,6 @@ metadata:
     requires:
       bins:
         - go
-      env:
-        - MEM0_API_KEY
 permissions:
   filesystem: "Guides edits to Go source in the current project. The library reads and writes no files."
   shell: "The Go toolchain to add and compile the dependency."
@@ -40,6 +39,20 @@ For install, operations, pagination and response fields, see [references/setup.m
 - You need Mem0's self-hosted memory library. This client targets the Platform API.
 - You need an official Mem0 SDK. This module is unofficial and not affiliated with Mem0.
 - You want to change the generated client itself. See `AGENTS.md` in the repository.
+
+## Finding endpoints and types
+
+The reference covers a few calls. Every operation in the spec has a generated method, and the spec's descriptions are on them as Go doc comments. Look names and fields up instead of guessing. After `go get github.com/psyb0t/go-mem0`, from inside your module:
+
+```bash
+go doc github.com/psyb0t/go-mem0 ClientWithResponsesInterface     # every endpoint method
+go doc github.com/psyb0t/go-mem0 MemoriesSearchV3JSONRequestBody  # one method, params type or model
+go doc -all github.com/psyb0t/go-mem0                             # the whole package
+```
+
+The same documentation is at https://pkg.go.dev/github.com/psyb0t/go-mem0.
+
+Method names come from the spec's operation IDs. `<OperationId>WithResponse` takes the context, then the path parameters in order, then `*<OperationId>Params` when the operation has query or header parameters, then the request body when it has one. The `JSON200` field (or `JSON202` and so on, per declared status) holds the decoded body; it is nil for any other status.
 
 ## Usage
 
