@@ -1,0 +1,18 @@
+{
+  "name": "go-mem0",
+  "description": "Unofficial Go client for the Mem0 Platform API: memories, entities, organizations, projects, webhooks, profiles and Dream operations, generated from the spec Mem0 publishes.",
+  "author": {
+    "name": "psyb0t",
+    "url": "https://github.com/psyb0t"
+  },
+  "homepage": "https://github.com/psyb0t/go-mem0",
+  "license": "MIT",
+  "keywords": [
+    "mem0",
+    "memory",
+    "ai-memory",
+    "api-client",
+    "go-library",
+    "openapi"
+  ]
+}
