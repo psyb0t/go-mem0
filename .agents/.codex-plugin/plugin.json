@@ -1,6 +1,6 @@
 {
   "name": "go-mem0",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Unofficial Go client for the Mem0 Platform API: memories, entities, organizations, projects, webhooks, profiles and Dream operations, generated from the spec Mem0 publishes.",
   "author": {
     "name": "psyb0t",

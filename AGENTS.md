@@ -12,7 +12,7 @@ The entire OpenAPI 3.0.1 document is generated, including deprecated endpoints. 
 
 ## Stack
 
-- Go 1.26.9.
+- Go 1.26.10.
 - oapi-codegen, pinned as a `tool` dependency in `go.mod`.
 - Runtime: `github.com/oapi-codegen/runtime`.
 
